@@ -1,0 +1,30 @@
+{
+  "name": "vocabulary-trainer-2",
+  "version": "0.0.1",
+  "description": "An app to help you learn a new language.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "ejs": "2.5.7",
+    "express": "4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "engines": {
+    "node": "6.11.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kameli-2/vocabulary-trainer-2.git"
+  },
+  "author": "kameli-2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kameli-2/vocabulary-trainer-2/issues"
+  },
+  "homepage": "https://github.com/kameli-2/vocabulary-trainer-2#readme"
+}
