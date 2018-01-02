@@ -1,6 +1,0 @@
-{
-    "name": "Vocabulary trainer 2",
-    "description": "An app to help you learn a new language.",
-    "repository": "https: //github.com/kameli-2/vocabulary-trainer-2.git",
-    "image": "heroku/nodejs"
-}
