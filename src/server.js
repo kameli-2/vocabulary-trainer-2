@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 });
 
 // Start server
-let server = app.listen(1337, function () {
+let server = app.listen(process.env.PORT || 1337, function () {
   let host = server.address().address;
   let port = server.address().port;
 
