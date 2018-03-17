@@ -1,6 +1,7 @@
 var vocabularyTrainer = {
     app: document.getElementById('app'),
     dictionary: 'jp',
+    _lastWordAsked: null,
 
     /**
      * Return form data as an object
@@ -199,10 +200,23 @@ var vocabularyTrainer = {
             }
             return wordLevelIndex1 - wordLevelIndex2;
         });
+        
+        let r = wordStats[0].word;
 
-        return wordStats[0].word;
+        if (r === this._lastWordAsked && wordStats.length > 1) {
+            r = wordStats[1].word;
+        }
+
+        this._lastWordAsked = r;
+        return r;
     },
 
+    /**
+     * When user takes a guess, save the word stats in local storage
+     * 
+     * @param {int}     word    The word ID
+     * @param {boolean} correct True if user guessed correctly, false otherwise
+     */
     saveWordStats: function(word, correct) {
         var wordStats = window.localStorage.getItem('dictionary-' + this.dictionary);
         if (wordStats === null) {
