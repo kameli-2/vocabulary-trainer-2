@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vocabulary Trainer 2.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <h1>Vocabulary Trainer 2.0</h1>
+
+    <div id="app">
+
+        <form id="guess-word-form" action="api/guess.php" method="post" class="ajax-form" data-callback="guess">
+            
+            <label for="state-settings">Settings</label>
+            <input type="checkbox" id="state-settings" class="hidden" />
+            <div id="settings">
+                <input type="checkbox" name="reverse" id="reverse" class="checkbox" /><label for="reverse">Reverse</label>
+            </div>
+            
+            <div class="guess-box">
+                <div class="guess-box-word">
+                    <span>--</span>
+                    <input type="hidden" name="word" value="0" />
+                </div>
+                <div class="guess-box-guess">
+                    <input type="text" name="guess" id="guess-form-guess" autofocus />
+                    <button type="reset" class="empty-input"><label for="guess-form-guess">&times;</label></button>
+                </div>
+                <div class="guess-box-submit">
+                    <button type="submit"><label for="guess-form-guess">Check</label></button>
+                </div>
+            </div>
+
+        </form>
+
+        <p class="text-center"><a href="addWord.html">Add new words</a></p>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
